@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="content_block">
+
+			<div class="reset">
+				<div class="counter">'第一节'</div>
+				<div class="counter">'第一节'</div>
+				<div class="counter">第二节
+					<div class="reset">
+						<div class="counter">'第一节'</div>
+						<div class="counter">'第一节'</div>
+						<div class="counter">'第一节'
+							<div class="reset">
+								<div class="counter">'第一节'</div>
+								<div class="counter">'第一节'</div>
+								<div class="counter">'第一节'</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style>
+		.content_block {
+			text-align: center;
+		}
+
+		.reset {
+			padding-left: 40px;
+			counter-reset: wangxiaoer;
+		}
+
+		.counter:before {
+			content: counters(wangxiaoer, '-') '. ';
+			counter-increment: wangxiaoer;
+		}
+	</style>
+</html>
